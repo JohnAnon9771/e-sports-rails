@@ -11,8 +11,15 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-    <main class="container mx-auto mt-28 px-5 flex">
+  <body class="bg-[#121214] bg-galaxy bg-no-repeat bg-cover">
+    <header class="flex items-center justify-center py-20">
+      <%= load_svg("logo.svg") %>
+    </header>
+    <main class="container mx-auto h-full w-full flex items-center justify-center">
+      <h1 class="text-6xl font-black text-white">
+        Seu <span class="bg-primary-gradient bg-clip-text text-transparent">duo</span> está aqui.
+      </h1>
+      
       <%= yield %>
     </main>
   </body>
