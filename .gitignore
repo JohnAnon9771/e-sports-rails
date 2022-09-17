@@ -33,6 +33,9 @@
 /app/assets/builds/*
 !/app/assets/builds/.keep
 
+# Node modules
+/node_modules
+
 # Ignore env files
 .env
 
