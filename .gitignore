@@ -40,3 +40,6 @@
 .tool-versions
 
 config/database.yml
+
+# credentials key
+/config/credentials/development.key

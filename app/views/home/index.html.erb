@@ -1,1 +1,12 @@
-<p>ola</p>
+<div class="flex text-white overflow-auto max-w-7xl gap-6 invisible-scrollbar mt-16 mb-8 items-center justify-start snap-x snap-mandatory">
+  <% @top_games.each do |game| %>
+    <div class="flex-none relative truncate snap-start rounded-lg">
+      <img src="<%= game.box_art_url %>" alt="" class="h-60 w-44">
+
+      <div class="absolute bottom-0 flex flex-col items-start p-4 bg-gradient-to-t from-black to-transparent w-full">
+        <span class="font-bold text-base"><%= game.name %></span>
+        <span class="text-sm font-normal">0 anúncios</span>
+      </div>
+    </div>
+  <% end %>
+</div>

@@ -1,10 +1,10 @@
 class HomeController < ApplicationController
   def index
     twitch_client = Twitch::Client.new(
-      client_id: client_id,
-      client_secret: client_secret,
+      client_id: Rails.application.credentials.dig(:twitch, :client_id),
+      access_token: Rails.application.credentials.dig(:twitch, :access_token)
     )
 
-    twitch_client.get_top_games
+    @top_games = twitch_client.get_top_games.data
   end
 end

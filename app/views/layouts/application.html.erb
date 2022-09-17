@@ -15,12 +15,27 @@
     <header class="flex items-center justify-center py-20">
       <%= load_svg("logo.svg") %>
     </header>
-    <main class="container mx-auto h-full w-full flex items-center justify-center">
+    
+    <main class="container mx-auto h-full w-full flex flex-col items-center justify-center mb-44">
       <h1 class="text-6xl font-black text-white">
         Seu <span class="bg-primary-gradient bg-clip-text text-transparent">duo</span> está aqui.
       </h1>
       
       <%= yield %>
+
+      <div class="p-2 w-full bg-[#2A2634] relative flex items-center justify-between pt-7 pb-6 px-8">
+        <div class="bg-primary-gradient w-full h-1 absolute top-0 left-0 right-0"></div>
+
+        <div class="">
+          <h2 class="text-2xl font-black text-white">Não encontrou seu duo?</h2>
+          <p class="text-base text-zinc-400">Públique um anúncio para encontrar novo players!</p>
+        </div>
+
+        <button class="bg-violet-500 text-white flex items-center py-3 gap-3 rounded-md px-4">
+          <%= load_svg("glass.svg") %>
+          Publicar anúncio
+        </button>
+      </div>
     </main>
   </body>
 </html>
